@@ -14,6 +14,8 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { RegistrationComponent } from './components/registration/registration.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { AuthService } from './services/auth.service';
+import { HttpClientModule } from '@angular/common/http';
 
 const routes = [
   { path: 'register', component: RegistrationComponent},
@@ -35,9 +37,10 @@ const routes = [
     MatButtonModule,
     MatInputModule,
     MatFormFieldModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
