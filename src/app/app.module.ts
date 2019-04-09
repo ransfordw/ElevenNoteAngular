@@ -17,6 +17,7 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 const routes = [
   { path: 'register', component: RegistrationComponent}
+  { path: '**', component: RegistrationComponent}
 ];
 
 @NgModule({
